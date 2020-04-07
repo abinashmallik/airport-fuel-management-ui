@@ -6,6 +6,7 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { formatDateTime } from "../utils/apputil";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,7 +68,7 @@ export default function ControlledExpansionPanels(props) {
               <>
                 <Grid container>
                   <Grid item xs={3}>
-                    {transaction.date}
+                    {formatDateTime(transaction.date)}
                   </Grid>
                   <Grid item xs={3}>
                     {transaction.type}
